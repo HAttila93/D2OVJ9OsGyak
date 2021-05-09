@@ -46,8 +46,6 @@ int main(int argc, char const *argv[])
         sem_wait(sem_producer);    	
         if(strlen(data) > 0){
     		printf("Olvasom: %s\n", data);
-            bool eleg = (strcmp(data, "elég") == 0);
-    		data[0] = 0;
     	}
         sem_post(sem_consumer);
         
